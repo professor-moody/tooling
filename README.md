@@ -1,35 +1,75 @@
-**Tools included**
+Here's an enhanced version of your README:
 
-adalanche: Active Directory ACL Visualizer and Explorer (https://github.com/lkarlslund/Adalanche)
-adrecon: Active Directory information gathering tool using MS Excel for reporting (https://github.com/adrecon/ADRecon)
-azureadrecon: Azure AD / Entra ID information gathering tool using MS Excel for reporting (https://github.com/adrecon/AzureADRecon)
-certify: Active Directory Certificate Services enumeration and abuse tool (https://github.com/GhostPack/Certify)
-certipy: Active Directory Certificate Services enumeration and abuse tool (https://github.com/ly4k/Certipy)
-crassus: Windows privilege escalation discovery tool (https://github.com/vu-ls/Crassus)
-inveigh: .NET IPv4/IPv6 machine-in-the-middle tool (https://github.com/Kevin-Robertson/Inveigh)
-kerbrute: Kerberos pre-auth bruteforcing tool (https://github.com/ropnop/kerbrute)
-lazagne: Credentials Recovery tool (https://github.com/AlessandroZ/LaZagne)
-mimikatz: Windows Credentials Recovery tool (https://github.com/gentilkiwi/mimikatz)
-pingcastle: Active Directory Auditing tool (https://github.com/vletoux/pingcastle)
-powermad: PowerShell MachineAccountQuota and DNS exploit tools (https://github.com/Kevin-Robertson/Powermad)
-rubeus: Kerberos Interaction and Abuse tool (https://github.com/GhostPack/Rubeus)
-seatbelt: Local Privilege Escalation tool (https://github.com/GhostPack/Seatbelt)
-sharpdpapi: DPAPI abuse tool (https://github.com/GhostPack/SharpDPAPI)
-sharphound: Data Collector for BloodHound (https://github.com/BloodHoundAD/SharpHound)
-sharprdp: RDP Console Application for Command Execution (https://github.com/0xthirteen/SharpRDP)
-sharpup: Local Privilege Escalation tool (https://github.com/GhostPack/SharpUp)
-sharpwsus: WSUS Lateral Movement tool (https://github.com/nettitude/SharpWSUS)
-snaffler: Fileshare Discovery and Enumeration tool (https://github.com/SnaffCon/Snaffler)
-stracciatella: OpSec-safe Powershell runspace tool (https://github.com/mgeeky/Stracciatella)
-winpeas: Local Privilege Escalation tool (https://github.com/carlospolop/PEASS-ng/tree/master)
-Whisker: Active Directory Shadow Credentials tool (https://github.com/eladshamir/Whisker)
+# Offensive Security Tools Collection
 
-FAQ
-Why?
-Many OffSec tools are shipped with their source code only and therefore need to be compiled manually. This is a very time-consuming task, especially if you want to keep your tools up to date before doing assessments. Better save the time for more important things, right?
+A comprehensive, automated build pipeline for essential Windows offensive security tools. Fresh builds delivered weekly from official sources.
 
-Duhh, but you also put PowerShell scripts in releases. Why?
-We don't want to rack our brains every time before an assessment about which tools we need. A release conveniently contains all the tools we need for the assessment as a collection.
+## Tools Included
 
-Did you backdoor the tools?
-No. Cross our heart and hope to die.
+### Active Directory & Azure
+- **[PingCastle](https://github.com/vletoux/pingcastle)** - Active Directory security assessment and auditing
+- **[ADRecon](https://github.com/adrecon/ADRecon)** - Active Directory reconnaissance with Excel reporting
+- **[AzureADRecon](https://github.com/adrecon/AzureADRecon)** - Azure AD/Entra ID reconnaissance tool
+- **[Adalanche](https://github.com/lkarlslund/Adalanche)** - Active Directory ACL visualizer and explorer
+- **[SharpHound](https://github.com/BloodHoundAD/SharpHound)** - BloodHound data collector for AD analysis
+
+### Kerberos & Authentication
+- **[Rubeus](https://github.com/GhostPack/Rubeus)** - Kerberos interaction and abuse toolkit
+- **[Mimikatz](https://github.com/gentilkiwi/mimikatz)** - Windows credential extraction utility
+
+### Certificate Services
+- **[Certify](https://github.com/GhostPack/Certify)** - AD CS enumeration and abuse (C#)
+- **[Certipy](https://github.com/ly4k/Certipy)** - AD CS enumeration and abuse (Python)
+- **[Whisker](https://github.com/eladshamir/Whisker)** - Shadow credentials manipulation
+
+### Privilege Escalation
+- **[Seatbelt](https://github.com/GhostPack/Seatbelt)** - Security enumeration for privilege escalation
+- **[SharpUp](https://github.com/GhostPack/SharpUp)** - Windows privilege escalation checks
+- **[WinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master)** - Windows privilege escalation awesome scripts
+- **[Crassus](https://github.com/vu-ls/Crassus)** - Windows privilege escalation discovery
+
+### Lateral Movement & Exploitation
+- **[SharpWSUS](https://github.com/nettitude/SharpWSUS)** - WSUS lateral movement tool
+- **[PowerMad](https://github.com/Kevin-Robertson/Powermad)** - MachineAccountQuota and DNS exploitation
+- **[Inveigh](https://github.com/Kevin-Robertson/Inveigh)** - .NET IPv4/IPv6 MITM platform
+
+### Information Gathering
+- **[Snaffler](https://github.com/SnaffCon/Snaffler)** - Network share enumeration and sensitive data discovery
+- **[LaZagne](https://github.com/AlessandroZ/LaZagne)** - Local password and credential recovery
+
+### Execution & Evasion
+- **[Stracciatella](https://github.com/mgeeky/Stracciatella)** - OpSec-safe PowerShell runspace from C#
+
+## Start Here!
+
+Download the latest release from the [Releases](../../releases) page. Each release contains pre-compiled binaries for all tools.
+
+## FAQ
+
+### Why automate compilation?
+Compiling offensive security tools from source is time-consuming and requires various build dependencies. Our automated pipeline saves hours of setup time, letting you focus on what matters - the assessment.
+
+### Are PowerShell scripts included?
+Yes! Each release bundles everything - compiled binaries and PowerShell scripts - giving you a complete toolkit ready for deployment.
+
+
+### What versions are compiled?
+Always the latest. Our pipeline pulls the most recent commit from each tool's official repository. Check commit messages for exact version references.
+
+### How often are releases updated?
+Weekly automated releases ensure you always have access to the latest features and bug fixes.
+
+### Missing your favorite tool?
+Open an issue! We're always looking to expand our collection with community-recommended tools.
+
+## License
+
+Each tool maintains its original license. Please review individual tool repositories for specific licensing terms.
+
+## Disclaimer
+
+These tools are for authorized security assessments only. Users are responsible for compliance with all applicable laws and regulations.
+
+---
+
+*Automated with ❤️ for the security community*
