@@ -51,6 +51,8 @@ Compiling offensive security tools from source is time-consuming and requires va
 ### Are PowerShell scripts included?
 Yes! Each release bundles everything - compiled binaries and PowerShell scripts - giving you a complete toolkit ready for deployment.
 
+### Did you put malicious stuff in these?
+Nope - that's the point. 
 
 ### What versions are compiled?
 Always the latest. Our pipeline pulls the most recent commit from each tool's official repository. Check commit messages for exact version references.
