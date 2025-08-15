@@ -1,4 +1,3 @@
-Here's an enhanced version of your README:
 
 # Offensive Security Tools Collection
 
