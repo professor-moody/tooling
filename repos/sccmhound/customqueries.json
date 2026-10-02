@@ -1,0 +1,37 @@
+{
+	"queries": [
+		{
+			"name": "Computers with Specified IP (change as required)",
+			"category": "SCCMHound",
+			"queryList": [
+				{
+					"final": true,
+					"query": "MATCH (c:Computer) WHERE NOT isEmpty(c.sccmIPAddresses) AND ANY(value in c.sccmIPAddresses WHERE value contains '10.0.0') RETURN c",
+					"allowCollapse": true
+				}
+			]
+		},
+		{
+			"name": "Computers with Unresolvable Sessions",
+			"category": "SCCMHound",
+			"queryList": [
+				{
+					"final": true,
+					"query": "MATCH (c:Computer) WHERE NOT isEmpty(c.sccmUnresolvableSessions) AND NOT ALL(value in c.sccmUnresolvableSessions WHERE value CONTAINS 'LOCAL' OR value CONTAINS 'NT AUTHORITY' OR value CONTAINS 'ANONYMOUS LOGON' or value CONTAINS 'LOCAL SERVICE' or value CONTAINS 'NETWORK SERVICE') RETURN c",
+					"allowCollapse": true
+				}
+			]
+		},
+		{
+			"name": "Shortest Paths (MemberOf|HasSession|AdminTo)",
+			"category": "SCCMHound",
+			"queryList": [
+				{
+					"final": true,
+					"query": "MATCH p=shortestPath((n)-[:MemberOf|HasSession|AdminTo*1..]->(m:Group)) WHERE m.name CONTAINS 'DOMAIN ADMINS' AND NOT n=m RETURN p",
+					"allowCollapse": true
+				}
+			]
+		}
+	]
+}
